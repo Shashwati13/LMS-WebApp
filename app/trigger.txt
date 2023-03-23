@@ -1,0 +1,58 @@
+BEGIN
+if(old.address!=new.address)
+then 
+insert into track_villager values(old.address,adhar_card,adhar_no,bpl_certificate,bpl_no,contact,house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.adhar_card!=new.adhar_card)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,contact,house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.adhar_no!=new.adhar_no)
+then 
+insert into track_villager values(address,adhar_card,old.adhar_no,bpl_certificate,bpl_no,contact,house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.bpl_certificate!=new.bpl_certificate)
+then 
+insert into track_villager values(address,adhar_card,adhar_no,old.bpl_certificate,bpl_no,contact,house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.bpl_no!=new.bpl_no)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,old.bpl_no,contact,house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.contact!=new.contact)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,old.contact,house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.house_no!=new.house_no)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,contact,old.house_no,name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.name!=new.name)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,contact,house_no,old.name,no_of_house_member,toilet,v_name);
+End if;
+
+if(old.no_of_house_members!=new.no_of_house_members)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,contact,house_no,name,old.no_of_house_members,toilet,v_name);
+End if;
+
+if(old.toilet!=new.toilet)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,contact,house_no,name,no_of_house_member,old.toilet,v_name);
+End if;
+
+if(old.v_name!=new.v_name)
+then 
+insert into track_villager values(address,old.adhar_card,adhar_no,bpl_certificate,bpl_no,contact,house_no,name,no_of_house_member,toilet,old.v_name);
+End if;
+
+
+end

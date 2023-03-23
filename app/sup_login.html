@@ -1,0 +1,44 @@
+<html>
+<head><TITLE>NIRMAL BHARAT ABHIYAN </TITLE>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+</HEAD>
+<BODY>
+<div class="header">
+<div class="nba">
+<img src="v.jpg" style="width:115px;height:115px;">
+</div>
+<H1>Welcome to Nirmal Bharat Abhiyan's IHHL</h1>
+</div>
+<br><h3><center>SUPERVISOR LOGIN</center></h3></br>
+ <form name="section officer" action="sup_login.php" method="POST">
+ </center>
+ <center>
+ <h4> Enter the Name: <input type="text" name="username" id="name" required>
+ <div id="abc" ></div>
+ <script type="text/javascript">
+ $(document).ready(function(){
+		
+		$('#name').change(function(){
+		var vid=$('#name').val();
+		          
+			  		$('#abc').load('supvalidate.php',{'vid':vid})
+	});
+	});
+	</script>
+ <h4><br> Enter password: <input type="password" name="password" id="pa" ></br>
+ <script type="text/javascript">
+ $(document).ready(function(){
+		
+		$('#pa').change(function(){
+		var vid=$('#pa').val();
+		          
+			  		$('#abc').load('supvalidatepassword.php',{'vid':vid})
+	});
+	});
+	</script>
+ 
+   <h2><input id="log" type="submit" value="Login"></center></h2>
+   </form>
+   </body>
+   </html>
